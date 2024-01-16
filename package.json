@@ -1,7 +1,7 @@
 {
   "name": "code-ai-journey",
-  "homepage": "https://CodeAIJourney.github.io",
-  "author": "jcastano97",
+  "homepage": "https://codeaijourney.github.io",
+  "author": "codeaijourney",
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
@@ -38,7 +38,7 @@
     "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss",
     "preview": "vite preview",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -b master -d build"
+		"deploy": "gh-pages -b master -d dist"
   },
   "eslintConfig": {
     "extends": [
