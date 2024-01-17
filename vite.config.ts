@@ -6,6 +6,7 @@ export default defineConfig((configEnv) => {
 	const isDevelopment = configEnv.mode === "development";
 
 	return {
+    base: '/',
 		plugins: [react(), tsconfigPaths()],
 		css: {
 			modules: {
