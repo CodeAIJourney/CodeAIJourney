@@ -1,12 +1,6 @@
 import { configureStore, StateFromReducersMapObject } from "@reduxjs/toolkit";
-import accountReducer from "@store/reducers/accountReducer";
-import appSettingReducer from "@store/reducers/appSettingReducer";
 import { logger } from "@utils/logger";
-
-const reducer = {
-	appSetting: appSettingReducer,
-	account: accountReducer,
-};
+import { reducer } from "@store/reducers";
 
 export type RootState = StateFromReducersMapObject<typeof reducer>;
 

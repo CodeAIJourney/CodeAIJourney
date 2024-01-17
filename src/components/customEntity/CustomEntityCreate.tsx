@@ -2,7 +2,7 @@ import React from "react";
 import { Controller, SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
 
 import { useAppDispatch } from "@store/hooks";
-import { fetch } from "@store/reducers/CustomEntity.reducer";
+import { fetch } from "@store/reducers/customEntityReducer";
 import { logger } from "@utils/logger";
 import { CustomInput } from "@components/common/material-ui/CustomInput";
 import { CustomButton } from "@components/common/material-ui/CustomButton";

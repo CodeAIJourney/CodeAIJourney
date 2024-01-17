@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AccountInterface } from "@interfaces/account/AccountInterface";
-import { logger } from "@utils/logger";
 import { CustomEntityInterface } from "@interfaces/customEntity/CustomEntity.interface";
+import { logger } from "@utils/logger";
 
 export interface CustomEntityState {
 	isLogged: boolean;
@@ -19,10 +19,10 @@ export const customEntitySlice = createSlice({
 	initialState,
 	reducers: {
 		fetch: (state, action: PayloadAction<CustomEntityInterface>) => {
-			logger.debug("fetch: ", action.payload.name);
+			logger.debug(state);
 		},
 		create: (state) => {
-			logger.debug("create: ");
+			logger.debug(state);
 		},
 	},
 });
