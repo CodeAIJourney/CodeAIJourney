@@ -1,15 +1,36 @@
-**CodeAIJourney: Discovering the Future of AI**
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Welcome to CodeAIJourney, where the journey of exploration in the world of artificial intelligence begins. We are a pioneering initiative dedicated to unraveling the mysteries and infinite possibilities of AI. Our goal is to deliver innovative AI solutions, share knowledge through interactive learning, and connect enthusiasts and professionals through a global network.
+## Getting Started
 
-***What we offer?***
+First, run the development server:
 
-Custom AI Solutions: We develop and adapt artificial intelligence solutions to meet the specific needs of different sectors and companies.
-Continuous Learning: We provide learning resources, tutorials and guides for those looking to delve deeper into the field of AI, from beginners to experts.
-Social Media Presence: Stay up to date with the latest trends and developments in AI by following us on our social media platforms. We offer interactive content, discussions and regular updates.
-Informative Newsletters: Subscribe to our newsletter to receive the latest in AI news, technological advances, and practical tips directly to your inbox.
-Our mission
-At CodeAIJourney, we believe that artificial intelligence is more than a technology; It is a journey of innovation and discovery. We strive to be leaders in democratizing AI knowledge, making it accessible, understandable and applicable to everyone.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-***Join Us on This Journey***
-Whether you're an experienced developer, a technology enthusiast, or just someone curious about what AI can offer, there's a place for you on CodeAIJourney. Together, we can explore the wonders of artificial intelligence and shape the future of this exciting technology.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

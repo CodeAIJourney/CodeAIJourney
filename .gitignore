@@ -1,15 +1,36 @@
-# Dependency directories
-node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Optional npm cache directory
-.npm
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# dotenv environment variables file
-.env
-.env.test
+# testing
+/coverage
 
-# Build output
-dist
+# next.js
+/.next/
+/out/
 
 # production
 /build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
