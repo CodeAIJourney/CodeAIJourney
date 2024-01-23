@@ -2,7 +2,7 @@ import React from "react";
 import { ControllerRenderProps, FieldError } from "react-hook-form";
 
 export class CustomCheckbox extends React.Component<
-	ControllerRenderProps & { children: React.ReactNode; hookError?: FieldError }
+	ControllerRenderProps & { children: React.ReactNode; hookError?: FieldError; 'stroke-width'?: number }
 > {
 	render(): React.ReactNode {
 		const { children, hookError, ...field } = this.props;

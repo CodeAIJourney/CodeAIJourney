@@ -19,6 +19,9 @@ export function LandingPage() {
 			<Link to="/connectFour">
 				<CustomButton>Go to connectFour</CustomButton>
 			</Link>
+			<Link to="/aiPlayground">
+				<CustomButton>Go to AI Playground</CustomButton>
+			</Link>
 		</BaseLayout>
 	);
 }

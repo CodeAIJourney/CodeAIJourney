@@ -19,6 +19,23 @@
 	.bg-primary-hover {
 		@apply bg-primary-hover-light dark:bg-primary-hover-dark;
 	};
+		.bg-secondary {
+			@apply bg-secondary-light dark:bg-secondary-dark;
+		}
+	
+		;
+	
+		.bg-secondary-selected {
+			@apply bg-secondary-selected-light dark:bg-secondary-selected-dark;
+		}
+	
+		;
+	
+		.bg-secondary-hover {
+			@apply bg-secondary-hover-light dark:bg-secondary-hover-dark;
+		}
+	
+		;
 	.bg-page {
 		@apply bg-body-light dark:bg-body-dark;
 	};

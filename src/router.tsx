@@ -4,12 +4,13 @@ import ErrorPage from "@components/settings/ErrorPage";
 import { AxiosClient } from "@utils/AxiosClient";
 import { AUTH_API_URL } from "@utils/consts";
 import { AccountPage } from "@views/account/AccountPage";
-import { store } from "./store";
+import { store } from "./store/store";
 import { HomePage } from "@views/HomePage";
 import { LandingPage } from "@views/LandingPage";
 import { DigitalSignPage } from "@views/digitalSign/digitalSignPage";
 import { CustomEntityPage } from "@views/customEntity/CustomEntityPage";
 import { ConnectFourPage } from "@views/connectFour/ConnectFourPage";
+import { AIPlaygroundPage } from "@views/ai/AIPlaygroundPage";
 
 AxiosClient.init(AUTH_API_URL(), store.getState().account.token ?? "");
 
@@ -42,6 +43,11 @@ export const router = createBrowserRouter([
 	{
 		path: "/connectFour",
 		element: <ConnectFourPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/aiPlayground",
+		element: <AIPlaygroundPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);

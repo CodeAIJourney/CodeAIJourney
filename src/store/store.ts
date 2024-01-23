@@ -1,11 +1,15 @@
 import { configureStore, StateFromReducersMapObject } from "@reduxjs/toolkit";
 import accountReducer from "@store/reducers/accountReducer";
 import appSettingReducer from "@store/reducers/appSettingReducer";
+import AIPlaygroundReducer from "./reducers/ai/AIPlaygroundReducer";
 import { logger } from "@utils/logger";
+import ChatBotReducer from "./reducers/ai/chatBot/ChatBotReducer";
 
 const reducer = {
 	appSetting: appSettingReducer,
 	account: accountReducer,
+	aiPlayground: AIPlaygroundReducer,
+	chatBot: ChatBotReducer,
 };
 
 export type RootState = StateFromReducersMapObject<typeof reducer>;

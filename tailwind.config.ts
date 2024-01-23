@@ -33,6 +33,22 @@ export default {
 					light: "#34D42C",
 					dark: "#1083D6"
 				},
+				'secondary-text': {
+					light: "#333333",
+					dark: "#EAEAEA"
+				},
+				'secondary-selected': {
+					light: "#E0F2CF",
+					dark: "#70B5FF"
+				},
+				'secondary-selected-text': {
+					light: "#000000",
+					dark: "#FFFFFF"
+				},
+				'secondary-hover': {
+					light: "#88E966",
+					dark: "#47A0E6"
+				},
 				title: {
 					light: "#212121",
 					dark: "#EAEAEA"
@@ -61,5 +77,5 @@ export default {
 		},
 	},
 	plugins: [],
-	safelist: ["shadow-all", "focus:shadow-all"],
+	safelist: ["shadow-all", "focus:shadow-all", "bg-secondary"],
 } satisfies Config;
