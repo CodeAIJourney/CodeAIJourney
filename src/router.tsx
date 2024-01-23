@@ -11,6 +11,7 @@ import { DigitalSignPage } from "@views/digitalSign/digitalSignPage";
 import { CustomEntityPage } from "@views/customEntity/CustomEntityPage";
 import { ConnectFourPage } from "@views/connectFour/ConnectFourPage";
 import { AIPlaygroundPage } from "@views/ai/AIPlaygroundPage";
+import { ExplorePage } from "@views/ExplorePage";
 
 AxiosClient.init(AUTH_API_URL(), store.getState().account.token ?? "");
 
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
 	{
 		path: "/home",
 		element: <HomePage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/explore",
+		element: <ExplorePage />,
 		errorElement: <ErrorPage />,
 	},
 	{

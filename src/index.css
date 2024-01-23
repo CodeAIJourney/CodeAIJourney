@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #6b6b6b36;
+}
+
+.dark ::-webkit-scrollbar-track {
+	background: #ffffff38;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #000000;
+	@apply rounded;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: #ffffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #0000007c;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+	background: #ffffffc9;
+}
 @layer base {
 	html, body, #root, .App {
 		min-width: 300px;
@@ -19,28 +52,26 @@
 	.bg-primary-hover {
 		@apply bg-primary-hover-light dark:bg-primary-hover-dark;
 	};
-		.bg-secondary {
-			@apply bg-secondary-light dark:bg-secondary-dark;
-		}
-	
-		;
-	
-		.bg-secondary-selected {
-			@apply bg-secondary-selected-light dark:bg-secondary-selected-dark;
-		}
-	
-		;
-	
-		.bg-secondary-hover {
-			@apply bg-secondary-hover-light dark:bg-secondary-hover-dark;
-		}
-	
-		;
+	.bg-secondary {
+		@apply bg-secondary-light dark:bg-secondary-dark;
+	};
+	.bg-secondary-selected {
+		@apply bg-secondary-selected-light dark:bg-secondary-selected-dark;
+	};
+	.bg-secondary-hover {
+		@apply bg-secondary-hover-light dark:bg-secondary-hover-dark;
+	};
+	.bg-headbar {
+		@apply bg-body-light dark:bg-body-dark;
+	};
 	.bg-page {
 		@apply bg-body-light dark:bg-body-dark;
 	};
 	.bg-container {
 		@apply bg-container-light dark:bg-container-dark;
+	};
+	.text-headbar {
+		@apply text-title-light dark:text-title-dark;
 	};
 	.text-primary {
 		@apply text-primary-text-light dark:text-primary-text-dark;
