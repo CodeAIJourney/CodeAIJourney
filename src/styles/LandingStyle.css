@@ -1,10 +1,12 @@
 .bg-landing {
     background: #190855;
-    
-    background-image: url('/images/background/landing-background.jpg');
+}
+.bg-landing {
+    background-image: url('/images/background/landing-background.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+	z-index: 1000;
 }
 
 .bg-button {

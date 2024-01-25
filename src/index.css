@@ -37,6 +37,7 @@
 }
 @layer base {
 	html, body, #root, .App {
+		font-family: 'Roboto';
 		min-width: 300px;
 		overflow-x: auto;
 		width: 100%;
