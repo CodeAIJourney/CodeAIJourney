@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
-import { CustomButton } from "@components/common/material-ui/CustomButton";
 import { BaseLayout } from "@layouts/BaseLayout";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 import "../styles/LandingStyle.css";
+import { useAppSelector } from "@store/hooks";
+import { useEffect } from "react";
+import React from "react";
 
 export function LandingPage() {
+	const isDarkMode = useAppSelector((state) => state.appSetting.isDarkMode);
+	const [particlesColor, setParticlesColor] = React.useState('#999999');
 	const particlesInit = async (main) => {
 		await loadFull(main);
 	};
@@ -14,6 +18,15 @@ export function LandingPage() {
 	const particlesLoaded = (container) => {
 		console.log("Particles loaded");
 	};
+
+	useEffect(() => {
+		console.log(isDarkMode);
+		if (isDarkMode) {
+			setParticlesColor("#ffffff");
+		} else {
+			setParticlesColor("#000000");
+		}
+	}, [isDarkMode])
 
 	return (
 		<BaseLayout>
@@ -48,10 +61,10 @@ export function LandingPage() {
 						},
 						particles: {
 							color: {
-								value: "#ffffff"
+								value: particlesColor
 							},
 							links: {
-								color: "#ffffff",
+								color: particlesColor,
 								distance: 150,
 								enable: true,
 								opacity: 0.5,
@@ -92,15 +105,15 @@ export function LandingPage() {
 				/>
 				<div className="absolute inset-0">
 					<div>
-						<img src="/images/background/landing-background.webp" alt="background" className="max-h-screen mx-auto" />
+						<img src="/images/background/landing-background.webp" alt="background" className="shadow-img max-h-screen mx-auto" />
 					</div>
 					<div className="flex flex-col h-full absolute inset-0">
 						<div className="text-center pt-5 md:pt-8 lg:pt-10 pb-10 lg:pb-20">
-							<h1 className="text-white text-5xl sm:text-7xl lg:text-9xl font-thin">Code AI Journey</h1>
+							<h1 className="text-black dark:text-white text-5xl sm:text-7xl lg:text-9xl font-thin landing-title">Code AI Journey</h1>
 						</div>
 						<div className="flex-1 w-full flex">
-							<div className="container mx-auto my-auto bg-black bg-opacity-40">
-								<p className="font-xl text-xl text-center text-white">
+							<div className="container mx-auto my-auto bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-60">
+								<p className="font-xl text-xl text-center text-black dark:text-white">
 									Welcome to CodeAIJourney, where the journey of exploration in the world of artificial intelligence begins. We are a pioneering initiative dedicated to unraveling the mysteries and infinite possibilities of AI. Our goal is to deliver innovative AI solutions, share knowledge through interactive learning, and connect enthusiasts and professionals through a global network.
 								</p>
 							</div>

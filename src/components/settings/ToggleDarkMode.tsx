@@ -1,33 +1,33 @@
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { logger } from "../../utils/logger";
+import { useAppSelector, useAppDispatch } from "@store/hooks";
+import { setDarkMode } from "@store/reducers/appSettingReducer";
 
 const THEME_CLASS_DARK_MODE = "dark";
 
 export function ToggleDarkMode() {
-	const storageDarkMode = localStorage.getItem("darkMode");
-	const [darkMode, setDarkMode] = React.useState(storageDarkMode === "true" ? "true" : "false");
+	const isDarkMode = useAppSelector((state) => state.appSetting.isDarkMode);
+	const dispatch = useAppDispatch();
 
 	const initDarkMode = () => {
-		if (darkMode === "true") {
+		if (isDarkMode) {
 			document.documentElement.classList.add(THEME_CLASS_DARK_MODE);
 		} else {
 			document.documentElement.classList.remove(THEME_CLASS_DARK_MODE);
 		}
 	};
 
-	const toggleDarkMode = () => {
-		if (darkMode === "true") {
+	const toggle = () => {
+		if (isDarkMode) {
 			document.documentElement.classList.remove(THEME_CLASS_DARK_MODE);
-			localStorage.setItem("darkMode", "false");
-			setDarkMode("false");
+			dispatch(setDarkMode(false));
 			logger.info("darkMode false");
 		} else {
 			document.documentElement.classList.add(THEME_CLASS_DARK_MODE);
-			localStorage.setItem("darkMode", "true");
-			setDarkMode("true");
+			dispatch(setDarkMode(true));
 			logger.info("darkMode true");
 		}
 	};
@@ -40,7 +40,7 @@ export function ToggleDarkMode() {
 		<>
 			<button
 				className="z-10 p-1 text-white bg-gray-800 rounded dark:text-black dark:bg-white"
-				onClick={toggleDarkMode}
+				onClick={toggle}
 			>
 				<FontAwesomeIcon icon={faCircleHalfStroke} size="xl" />
 			</button>

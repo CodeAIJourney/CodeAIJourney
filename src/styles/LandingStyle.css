@@ -1,12 +1,21 @@
 .bg-landing {
-    background: #190855;
+    background: #dfdfdf;
 }
-.bg-landing {
-    background-image: url('/images/background/landing-background.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-	z-index: 1000;
+
+.dark .bg-landing {
+    background: black;
+}
+
+.landing-title {
+	text-shadow: 0px 0px 10px white;
+}
+
+.dark .landing-title {
+	text-shadow: 0px 0px 10px black;
+}
+
+.shadow-img {
+	filter: drop-shadow(10px 10px 10px #190855);
 }
 
 .bg-button {

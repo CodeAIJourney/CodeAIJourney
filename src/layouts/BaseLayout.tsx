@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ToggleDarkMode } from "@components/settings/ToggleDarkMode";
 import { BackgroundImgPropsInterface } from "@interfaces/BackgroundImgPropsInterface";
 import { HeadBar } from "@components/common/HeadBar";
+import "../styles/LandingStyle.css";
 
 export class BaseLayout extends React.Component<{
 	children: React.ReactNode;
@@ -15,7 +15,7 @@ export class BaseLayout extends React.Component<{
 				<div className="absolute top-0 left-0 right-0 h-fit z-10">
 					<HeadBar />
 				</div>
-				<div className="absolute top-0 left-0 right-0 buttom-0 text-content z-0 h-full">
+				<div className="absolute top-0 left-0 right-0 buttom-0 text-content z-0 h-full bg-landing">
 					<div className="flex flex-col h-full overflow-y-auto max-h-screen pt-10">
 						<div className="flex-1">
 							{this.props.children}
